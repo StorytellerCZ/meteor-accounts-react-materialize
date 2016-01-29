@@ -9,15 +9,15 @@ For full functionality inclide `storyteller:accounts-server`
 Components:
 =====
 
-<UserLogin />
+`<UserLogin />`
 
-<UserRegister />
+`<UserRegister />`
 
-<UserSettings />
+`<UserSettings />`
 Contains the following:
-* <UserChangeUsernane />
-* <UserEmail />
-* <UserChangePassword />
+* `<UserChangeUsernane />`
+* `<UserEmail />`
+* `<UserChangePassword />`
 
 Note:
 =====
