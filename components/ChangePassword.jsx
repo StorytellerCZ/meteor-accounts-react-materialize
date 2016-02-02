@@ -30,8 +30,7 @@ UserChangePassword = React.createClass({
 
     this.refs.passwordForm.reset()
   },
-
-  render(){
+  getContent(){
     return (<div className="section">
     <div className="row">
       <form method="post" className="col s12" ref="passwordForm" onSubmit={this.changePassword}>
@@ -52,5 +51,8 @@ UserChangePassword = React.createClass({
       </form>
     </div>
     </div>)
+  },
+  render(){
+    return (Meteor.user() !== undefined) ? this.getContent() : <div>Loading...</div>
   }
 })

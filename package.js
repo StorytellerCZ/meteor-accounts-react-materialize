@@ -13,7 +13,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   //mdg packages used
-  api.use(['ecmascript', 'react@0.14.3', 'check', 'accounts-password']);
+  api.use(['meteor', 'ecmascript', 'react@0.14.3', 'check', 'accounts-password']);
 
   //other packages in use
   api.use(['kadira:flow-router@2.10.0']);

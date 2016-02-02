@@ -1,7 +1,17 @@
 UserSettings = React.createClass({
   changeAvatar(){
-    if(Package['storyteller:profiles-react-materialize'] !== undefined){
+    if(Package['storyteller:profiles-react-materialize'] && Package['storyteller:profiles-server']){
       return(<UserChangeAvatar />)
+    }
+  },
+  addProfilesFields(){
+    if(Package['storyteller:profiles-react-materialize'] && Package['storyteller:profiles-server']){
+      return(<div>
+        <UserChangeName />
+        <div className="divider"></div>
+        <UserChangeBio />
+        <div className="divider"></div>
+      </div>)
     }
   },
   render(){
@@ -13,10 +23,10 @@ UserSettings = React.createClass({
         <div className="divider"></div>
         <UserChangeUsernane />
         <div className="divider"></div>
+        {this.addProfilesFields()}
         <UserEmail />
         <div className="divider"></div>
         <UserChangePassword />
-        <div className="divider"></div>
       </div>
     </div>
     </div>)
