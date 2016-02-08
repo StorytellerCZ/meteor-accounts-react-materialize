@@ -23,17 +23,16 @@ UserChangeUsernane = React.createClass({
     }
   },
   getContent(){
-    return (<div className="section">
-    <div className="row">
-      <h5>Change Username</h5>
-      <form method="post" className="col s12" ref="usernameForm" onSubmit={this.changeUsername}>
-        <div className="input-field">
-          <input type="text" name="username" value={Meteor.user().username} onChange={this.changeUsername}></input>
-          <input type="submit" value="Change" className="btn waves-effect"></input>
-        </div>
-      </form>
-    </div>
-    </div>)
+    return (
+      <form method="post" className="row" ref="usernameForm" onSubmit={this.changeUsername}>
+        <fieldset>
+          <legend>Change Username</legend>
+          <div className="input-field col s12">
+            <input type="text" name="username" value={Meteor.user().username} onChange={this.changeUsername}></input>
+            <input type="submit" value="Change" className="btn waves-effect"></input>
+          </div>
+        </fieldset>
+      </form>)
   },
   render(){
     return (Meteor.user() !== undefined) ? this.getContent() : <div>Loading...</div>

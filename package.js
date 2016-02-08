@@ -1,6 +1,6 @@
 Package.describe({
   name: 'storyteller:accounts-react-materialize',
-  version: '0.1.0',
+  version: '0.1.1',
   // Brief, one-line summary of the package.
   summary: 'Front end for accounts login, registration and settings with react and Materialize.',
   // URL to the Git repository containing the source code for this package.
@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.use(['meteor', 'ecmascript', 'react@0.14.3', 'check', 'accounts-password']);
 
   //other packages in use
-  api.use(['kadira:flow-router@2.10.0']);
+  api.use(['kadira:flow-router@2.10.0', 'storyteller:accounts-server@0.1.1']);
 
   //files
   api.addFiles(['components/Login.jsx', 'components/Register.jsx', 'components/Settings.jsx', 'components/ChangePassword.jsx', 'components/Email.jsx', 'components/ChangeUsername.jsx'], "client");

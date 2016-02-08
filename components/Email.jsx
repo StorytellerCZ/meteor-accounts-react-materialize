@@ -77,22 +77,22 @@ UserEmail = React.createClass({
     }
   },
   getContent(){
-    return (<div className="section">
-    <div className="row">
-      <h5>E-mails</h5>
-      <ul className="collection with-header">
-        <li className="collection-header">E-mails associated with your account</li>
-        {this.getEmails()}
-      </ul>
-      <form method="post" className="col s12" ref="emailForm" onSubmit={this.addEmail}>
-        <div className="input-field">
-          <input type="email" required name="email"></input>
-          <label htmlFor="email">Add e-mail</label>
-        </div>
-        <input type="submit" className="btn waves-effect" value="Add"></input>
-      </form>
-    </div>
-    </div>)
+    return (
+      <form method="post" className="row" ref="emailForm" onSubmit={this.addEmail}>
+        <fieldset>
+          <legend>E-mails</legend>
+          <ul className="collection with-header col s12">
+            <li className="collection-header">E-mails associated with your account</li>
+            {this.getEmails()}
+          </ul>
+          <div className="input-field col s12">
+            <input type="email" required name="email"></input>
+            <label htmlFor="email">Add e-mail</label>
+          </div>
+          <input type="submit" className="btn waves-effect waves-light" value="Add"></input>
+        </fieldset>
+
+      </form>)
   },
   render(){
     return (Meteor.user() !== undefined) ? this.getContent() : <div>Loading...</div>

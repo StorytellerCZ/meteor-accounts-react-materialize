@@ -20,13 +20,15 @@ UserRegister = React.createClass({
       check(password, String);
 
       //create the user
-      Accounts.createUser({email: email, username: username, password: password, createdOn: Date.now()}, function(error){
+      Accounts.createUser({email: email, username: username, password: password}, function(error){
+        /* TODO: figure out why we are getting "Content is required" error here even though the user gets created successfully
         if(error){
           console.log(error.reason);
           Materialize.toast(error.reason, 4000)
         } else {
           FlowRouter.go("Dashboard");
-        }
+        }*/
+        FlowRouter.go("Dashboard");
       });
     } else {
       console.log("Passwords don't match.");

@@ -31,26 +31,25 @@ UserChangePassword = React.createClass({
     this.refs.passwordForm.reset()
   },
   getContent(){
-    return (<div className="section">
-    <div className="row">
-      <form method="post" className="col s12" ref="passwordForm" onSubmit={this.changePassword}>
-          <h5>Change password</h5>
-          <div className="input-field">
-            <input type="password" name="old"></input>
-            <label htmlFor="old">Current password</label>
-          </div>
-          <div className="input-field">
-            <input type="password" name="new"></input>
-            <label htmlFor="new">New password</label>
-          </div>
-          <div className="input-field">
-            <input type="password" name="repeat"></input>
-            <label htmlFor="repeat">Repeat new password</label>
-          </div>
-          <input className="btn waves-effect" value="Submit" type="submit"></input>
-      </form>
-    </div>
-    </div>)
+    return (
+      <form method="post" className="row" ref="passwordForm" onSubmit={this.changePassword}>
+        <fieldset>
+          <legend>Change password</legend>
+            <div className="input-field col s12">
+              <input type="password" name="old"></input>
+              <label htmlFor="old">Current password</label>
+            </div>
+            <div className="input-field col s12">
+              <input type="password" name="new"></input>
+              <label htmlFor="new">New password</label>
+            </div>
+            <div className="input-field col s12">
+              <input type="password" name="repeat"></input>
+              <label htmlFor="repeat">Repeat new password</label>
+            </div>
+            <input className="btn waves-effect" value="Submit" type="submit"></input>
+        </fieldset>
+      </form>)
   },
   render(){
     return (Meteor.user() !== undefined) ? this.getContent() : <div>Loading...</div>

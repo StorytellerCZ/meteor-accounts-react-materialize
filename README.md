@@ -1,6 +1,6 @@
 A simple package with Materialize themed user components for React.
 
-You can include them where you want and build the page according to your wishes.
+You can include them where you want and build the page according to your wishes. You can add any Materialize package you like. There is no constraint on that in this package.
 
 NOT FOR PRODUCTION
 
