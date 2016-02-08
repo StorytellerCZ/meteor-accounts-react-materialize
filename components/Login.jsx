@@ -36,11 +36,11 @@ UserLogin = React.createClass({
           <h1>Login</h1>
           <form onSubmit={this.login}>
             <div className="input-field">
-              <input type="text" name="email" required />
+              <input className="validate" type="text" name="email" required />
               <label htmlFor="email">E-mail</label>
             </div>
             <div className="input-field">
-              <input type="password" name="password" required />
+              <input className="validate" type="password" name="password" required />
               <label htmlFor="email">Your password</label>
             </div>
             <div className="expanded button-group">

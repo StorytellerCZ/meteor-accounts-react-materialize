@@ -28,7 +28,7 @@ UserChangeUsernane = React.createClass({
         <fieldset>
           <legend>Change Username</legend>
           <div className="input-field col s12">
-            <input type="text" name="username" value={Meteor.user().username} onChange={this.changeUsername}></input>
+            <input type="text" className="validate" name="username" value={Meteor.user().username} onChange={this.changeUsername}></input>
             <input type="submit" value="Change" className="btn waves-effect"></input>
           </div>
         </fieldset>

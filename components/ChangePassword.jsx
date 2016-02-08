@@ -40,11 +40,11 @@ UserChangePassword = React.createClass({
               <label htmlFor="old">Current password</label>
             </div>
             <div className="input-field col s12">
-              <input type="password" name="new"></input>
+              <input className="validate" type="password" name="new"></input>
               <label htmlFor="new">New password</label>
             </div>
             <div className="input-field col s12">
-              <input type="password" name="repeat"></input>
+              <input className="validate" type="password" name="repeat"></input>
               <label htmlFor="repeat">Repeat new password</label>
             </div>
             <input className="btn waves-effect" value="Submit" type="submit"></input>

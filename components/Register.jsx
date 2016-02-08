@@ -47,19 +47,19 @@ UserRegister = React.createClass({
           <h1>Register</h1>
           <form onSubmit={this.register}>
             <div className="input-field">
-              <input type="text" name="username" required />
+              <input className="validate" type="text" name="username" required />
               <label htmlFor="username">Your username</label>
             </div>
             <div className="input-field">
-              <input type="email" name="email" required />
+              <input className="validate" type="email" name="email" required />
               <label htmlFor="email">Your e-mail</label>
             </div>
             <div className="input-field">
-              <input type="password" name="password" required />
+              <input className="validate" type="password" name="password" required />
               <label htmlFor="password">Your password</label>
             </div>
             <div className="input-field">
-              <input type="password" name="password2" required />
+              <input className="validate" type="password" name="password2" required />
               <label htmlFor="password2">Repeat your password</label>
             </div>
             <div className="expanded button-group">

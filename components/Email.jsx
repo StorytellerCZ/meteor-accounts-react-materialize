@@ -86,7 +86,7 @@ UserEmail = React.createClass({
             {this.getEmails()}
           </ul>
           <div className="input-field col s12">
-            <input type="email" required name="email"></input>
+            <input type="email" className="validate" required name="email"></input>
             <label htmlFor="email">Add e-mail</label>
           </div>
           <input type="submit" className="btn waves-effect waves-light" value="Add"></input>
