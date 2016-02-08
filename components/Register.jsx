@@ -42,24 +42,32 @@ UserRegister = React.createClass({
 
   render(){
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col s12 m8 offset-m2 l4 offset-l4 center-align">
-            <h1>Register</h1>
-            <form onSubmit={this.register}>
-              <input type="text" name="username" placeholder="Your username" required></input>
-              <input type="text" name="email" placeholder="Your e-mail" required></input>
-              <input type="password" name="password" placeholder="Your password" required></input>
-              <input type="password" name="password2" placeholder="Repeat your password" required></input>
-
-              <div className="expanded button-group">
-                <a className="btn" onClick={this.goToLogin}>Login</a>
-                <input type="submit" value="Create account" className="btn"></input>
-              </div>
-            </form>
-          </div>
+      <div className="row">
+        <div className="col s12 m8 offset-m2 l4 offset-l4 center-align">
+          <h1>Register</h1>
+          <form onSubmit={this.register}>
+            <div className="input-field">
+              <input type="text" name="username" required />
+              <label htmlFor="username">Your username</label>
+            </div>
+            <div className="input-field">
+              <input type="email" name="email" required />
+              <label htmlFor="email">Your e-mail</label>
+            </div>
+            <div className="input-field">
+              <input type="password" name="password" required />
+              <label htmlFor="password">Your password</label>
+            </div>
+            <div className="input-field">
+              <input type="password" name="password2" required />
+              <label htmlFor="password2">Repeat your password</label>
+            </div>
+            <div className="expanded button-group">
+              <a className="btn" onClick={this.goToLogin}>Login</a>
+              <input type="submit" value="Create account" className="btn"></input>
+            </div>
+          </form>
         </div>
-      </div>
-    )
+      </div>)
   }
 });
