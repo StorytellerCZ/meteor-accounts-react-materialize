@@ -1,35 +1,42 @@
+[![Code Climate](https://codeclimate.com/github/StorytellerCZ/meteor-accounts-react-materialize/badges/gpa.svg)](https://codeclimate.com/github/StorytellerCZ/meteor-accounts-react-materialize)[![Test Coverage](https://codeclimate.com/github/StorytellerCZ/meteor-accounts-react-materialize/badges/coverage.svg)](https://codeclimate.com/github/StorytellerCZ/meteor-accounts-react-materialize/coverage)[![Issue Count](https://codeclimate.com/github/StorytellerCZ/meteor-accounts-react-materialize/badges/issue_count.svg)](https://codeclimate.com/github/StorytellerCZ/meteor-accounts-react-materialize)
+
+# accounts-react-materialize
+
 A simple package with Materialize themed user components for React.
 
-You can include them where you want and build the page according to your wishes. You can add any Materialize package you like. There is no constraint on that in this package.
+You can include them where you want and build the page according to your wishes.
+You can add any Materialize package you like.
+There is no constraint on that in this package.
 
-NOT FOR PRODUCTION
+**NOT FOR PRODUCTION**
 
-For full functionality inclide `storyteller:accounts-server`
+For full functionality include `storyteller:accounts-server`
 
-Components:
-=====
+## Components
 
 `<UserLogin />`
 
 `<UserRegister />`
 
 `<UserSettings />`
-Contains the following:
-* `<UserChangeUsernane />`
-* `<UserEmail />`
-* `<UserChangePassword />`
 
-Note:
-=====
+Contains the following:
+
+*   `<UserChangeUsernane />`
+*   `<UserEmail />`
+*   `<UserChangePassword />`
+
+### Note
+
 Login and registration are full page components
 
-Some defaults:
-=====
-* After login and registration the components redirect to path named "Dashboard"
-* The login and registration page need to be named "Login" and "Register" respectively for easy transition between those two forms.
+## Some defaults
 
-Sample routes:
-=====
+*   After login and registration user is redirected to path named "dashboard"
+*   The login and registration paths need to be named "login" and "register"
+
+## Sample routes
+
 ```javascript
 FlowRouter.route("/", {
   name: "Dashboard",
@@ -63,13 +70,13 @@ FlowRouter.route("/user/settings", {
 });
 ```
 
-TODO:
-=====
-* Popup (modal) + dropdown login form component
-* Better error reporting on forms
-* Tests
-* Third-party OAuth logins, registration and merger of accounts
-* Reset password flow
-* Confirmation e-mail
-* Easy way to edit defaults via settings file or something
-* i18n
+## TODO
+
+*   Popup (modal) + dropdown login form component
+*   Better error reporting on forms
+*   Tests
+*   Third-party OAuth logins, registration and merger of accounts
+*   Reset password flow
+*   Confirmation e-mail
+*   Easy way to edit defaults via settings file or something
+*   i18n

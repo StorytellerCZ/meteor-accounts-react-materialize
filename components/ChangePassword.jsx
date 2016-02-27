@@ -1,3 +1,7 @@
+/**
+ * @class component UserChangePassword
+ * @classdesc Changes user password
+ */
 UserChangePassword = React.createClass({
   getInitialState() {
         return {
@@ -5,6 +9,12 @@ UserChangePassword = React.createClass({
         }
   },
 
+  /**
+   * Changes user password
+   * @access private
+   * @param {event} Submit event from form.
+   * @returns {null}
+   */
   changePassword(event){
     event.preventDefault()
 
@@ -30,6 +40,11 @@ UserChangePassword = React.createClass({
 
     this.refs.passwordForm.reset()
   },
+  /**
+   * Actual content to be displayed when user data are available.
+   * @access private
+   * @returns {jsx}
+   */
   getContent(){
     return (
       <form method="post" className="row" ref="passwordForm" onSubmit={this.changePassword}>
@@ -51,6 +66,10 @@ UserChangePassword = React.createClass({
         </fieldset>
       </form>)
   },
+  /**
+   * If user is defined it will show the content. Otherwise it will show a loading message.
+   * @access private
+   */
   render(){
     return (Meteor.user() !== undefined) ? this.getContent() : <div>Loading...</div>
   }

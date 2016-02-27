@@ -1,6 +1,6 @@
 Package.describe({
   name: 'storyteller:accounts-react-materialize',
-  version: '0.1.2',
+  version: '0.1.3',
   // Brief, one-line summary of the package.
   summary: 'Front end for accounts login, registration and settings with react and Materialize.',
   // URL to the Git repository containing the source code for this package.

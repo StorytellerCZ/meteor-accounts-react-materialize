@@ -1,9 +1,18 @@
+/**
+ * @class component UserRegister
+ * @classdesc User registration form.
+ */
 UserRegister = React.createClass({
   getInitialState() {
         return {
             errors: {}
         }
   },
+  /**
+   * Registers a new user in the system.
+   * @access private
+   * @param {event} e Submit event from form
+   */
   register(e){
     e.preventDefault();
     //get the data
@@ -28,18 +37,17 @@ UserRegister = React.createClass({
         } else {
           FlowRouter.go("Dashboard");
         }*/
-        FlowRouter.go("Dashboard");
+        FlowRouter.go("dashboard");
       });
     } else {
       console.log("Passwords don't match.");
       Materialize.toast("Passwords don't match.", 4000)
     }
   },
-  goToLogin(e){
-    e.preventDefault();
-    FlowRouter.go("Login");
-  },
-
+  /**
+   * Render the registration form.
+   * @access private
+   */
   render(){
     return (
       <div className="row">
@@ -63,7 +71,7 @@ UserRegister = React.createClass({
               <label htmlFor="password2">Repeat your password</label>
             </div>
             <div className="expanded button-group">
-              <a className="btn" onClick={this.goToLogin}>Login</a>
+              <a href={FlowRouter.path("login")} className="btn">Login</a>
               <input type="submit" value="Create account" className="btn"></input>
             </div>
           </form>
