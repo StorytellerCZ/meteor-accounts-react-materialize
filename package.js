@@ -17,7 +17,7 @@ Package.onUse(function(api) {
   api.use(['meteor', 'ecmascript', 'check', 'accounts-password']);
 
   //other packages in use
-  api.use(['kadira:flow-router@2.10.0', 'storyteller:accounts-server@0.1.1']);
+  api.use(['kadira:flow-router@2.12.1', 'storyteller:accounts-server@1.0.0']);
 
   //files
   api.addFiles(['components/Login.jsx', 'components/Register.jsx', 'components/Settings.jsx', 'components/ChangePassword.jsx', 'components/Email.jsx', 'components/ChangeUsername.jsx'], "client");
